@@ -3,6 +3,7 @@ function getPositionInfo()
 %标定完成后之间点击关闭图像显示框
 clc;
 clear;
+%读取图像
 im = imread('F:\Giga\primary_school_20180912_1_img\GT_IMG\im_50.jpg');
 %g=imresize(im,0.25);
 %imwrite(g,'F:\Giga2.0\CrowdCount-MCNN\data\original\shanghaitech\part_C_final\images\IMG_366.jpg')
@@ -21,5 +22,6 @@ catch
      image_info={};
      image_info.location=p;
      image_info.number=b;
+     %保存标注
      save F:\Giga2.0\CrowdCount-MCNN\data\original\shanghaitech\part_C_final\ground_truth\GT_IMG_366.mat image_info;
 end   
