@@ -1,11 +1,11 @@
 function image_info = cutImg(fileName)
     clc;
     disp(['Working on Image ', fileName])
-    A = imread(fileName);% ÔÚÕâÀïÊäÈëÔ´ÎÄ¼şµÄÎ»ÖÃ
+    A = imread(fileName);% åœ¨è¿™é‡Œè¾“å…¥æºæ–‡ä»¶çš„ä½ç½®
     resizeFactor = 12;
     % Ar = imresize(A);
-    [m,n,l] = size(A);%mĞĞÊı£¬´ú±í¿í¶È£»nÁĞÊı£¬´ú±í³¤¶È
-    a = 3;
+    [m,n,l] = size(A);%mè¡Œæ•°ï¼Œä»£è¡¨å®½åº¦ï¼›nåˆ—æ•°ï¼Œä»£è¡¨é•¿åº¦
+    a = 8;
     p=[];
     figure;
     for i = 1:a
@@ -53,7 +53,7 @@ function image_info = cutImg(fileName)
     image_info.location=p;
     b=size(p);
     image_info.number=b(1);
-    save([fileName(1:end-3), 'mat'], 'image_info');%ÔÚÕâÀïÊäÈë´æ´¢Î»ÖÃĞÅÏ¢µÄÎ»ÖÃ
+    save([fileName(1:end-3), 'mat'], 'image_info');%åœ¨è¿™é‡Œè¾“å…¥å­˜å‚¨ä½ç½®ä¿¡æ¯çš„ä½ç½®
 
 
 
